@@ -1,9 +1,10 @@
-import React from "react";
+import { Header } from "components/Header";
 import "./App.css";
 
-function App() {
+export function App() {
   return (
     <div className="App">
+      <Header />
       <header className="App-header">
         <a
           className="App-link"
@@ -17,5 +18,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
