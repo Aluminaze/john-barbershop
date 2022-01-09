@@ -1,1 +1,1 @@
-# JOHN Barber
+# JOHN Barbershop
