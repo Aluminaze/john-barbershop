@@ -25,6 +25,7 @@ declare module "@mui/material/styles" {
   interface Theme {
     customColor: {
       red: string;
+      green_pine: string;
       accent: {
         positive: {
           lightMode: string;
@@ -172,6 +173,7 @@ declare module "@mui/material/styles" {
   interface ThemeOptions {
     customColor: {
       red?: string;
+      green_pine?: string;
       accent: {
         positive: {
           lightMode?: string;
@@ -393,6 +395,7 @@ const theme = createTheme({
   },
   customColor: {
     red: "#E30611",
+    green_pine: "#0A775F",
     accent: {
       positive: {
         lightMode: "#26CD58",
