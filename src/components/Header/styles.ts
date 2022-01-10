@@ -1,11 +1,30 @@
+import { Theme } from "@mui/material/styles";
 import makeStyles from "@mui/styles/makeStyles";
 
-export const useStyles = makeStyles(() => {
+export const useStyles = makeStyles((theme: Theme) => {
   return {
     header: {
+      position: "fixed",
+      top: 0,
+      left: 0,
+      right: 0,
       display: "flex",
-      height: 50,
-      backgroundColor: "green",
+      justifyContent: "center",
+      height: 70,
+      backgroundColor: theme.customColor.background.primary.lightMode,
+    },
+    container: {
+      width: "1440px",
+      height: "100%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      padding: "0 1rem",
+    },
+    headerLogo: {
+      display: "flex",
+      alignItems: "center",
+      gap: "10px",
     },
   };
 });
