@@ -3,9 +3,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { App } from "components/App";
 import reportWebVitals from "./reportWebVitals";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-
-const theme = createTheme();
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "theme";
 
 ReactDOM.render(
   <React.StrictMode>
