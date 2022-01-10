@@ -1,6 +1,5 @@
 import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import { Icons } from "components/Icons";
 import { useStyles } from "./styles";
 
 import { styled } from "@mui/material/styles";
@@ -21,7 +20,6 @@ export const Header = () => {
     <div className={classes.header}>
       <div className={classes.container}>
         <div className={classes.headerLogo}>
-          <Icons.Barber sx={{ fontSize: 40 }} />
           <Typography variant="play_bold" sx={{ fontSize: "1.7rem" }}>
             JOHN Barbershop
           </Typography>

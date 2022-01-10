@@ -12,6 +12,8 @@ export const useStyles = makeStyles((theme: Theme) => {
       justifyContent: "center",
       height: 70,
       backgroundColor: theme.customColor.background.primary.lightMode,
+      boxShadow: "0 3px 5px rgba(57, 63, 72, 0.3)",
+      zIndex: 9999,
     },
     container: {
       width: "1440px",
