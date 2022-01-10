@@ -1,20 +1,26 @@
 import { Header } from "components/Header";
-import "./App.css";
+import { useStyles } from "./styles";
+import Typography from "@mui/material/Typography";
+import { Intro } from "components/Intro";
 
 export function App() {
+  const classes = useStyles();
+
   return (
-    <div className="App">
+    <div className={classes.app}>
       <Header />
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main className={classes.main}>
+        <div className={classes.container}>
+          <div className={classes.block}>
+            <Intro />
+          </div>
+          <div className={classes.block}>
+            <Typography variant="play_bold" sx={{ fontSize: "1.7rem" }}>
+              BLOCK 2
+            </Typography>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
