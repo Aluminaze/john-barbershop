@@ -9,11 +9,10 @@ export const useStyles = makeStyles((theme: Theme) => {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
+      gap: "40px",
     },
-
     left: {
       flexBasis: "40%",
-      border: "1px solid red",
       display: "flex",
       justifyContent: "center",
     },
@@ -21,8 +20,20 @@ export const useStyles = makeStyles((theme: Theme) => {
       maxWidth: "400px",
     },
     right: {
-      border: "1px solid red",
       flexBasis: "60%",
+      display: "flex",
+      flexDirection: "column",
+      gap: "50px",
+    },
+    items: {
+      display: "flex",
+      flexDirection: "column",
+      gap: "30px",
+    },
+    item: {
+      display: "flex",
+      alignItems: "center",
+      gap: "15px",
     },
   };
 });
