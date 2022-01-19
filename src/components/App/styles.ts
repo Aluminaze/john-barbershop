@@ -14,6 +14,17 @@ export const useStyles = makeStyles((theme: Theme) => {
       justifyContent: "center",
       marginTop: "70px",
     },
+    acticle: {
+      width: "100%",
+      display: "flex",
+      flexDirection: "column",
+    },
+    section: {
+      flexGrow: 1,
+      height: "100%",
+      display: "flex",
+      justifyContent: "center",
+    },
     container: {
       height: "100%",
       width: "1440px",

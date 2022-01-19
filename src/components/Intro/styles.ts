@@ -17,23 +17,28 @@ export const useStyles = makeStyles((theme: Theme) => {
       justifyContent: "center",
     },
     img: {
-      maxWidth: "400px",
+      maxWidth: "350px",
     },
     right: {
       flexBasis: "60%",
       display: "flex",
       flexDirection: "column",
-      gap: "50px",
-    },
-    items: {
-      display: "flex",
-      flexDirection: "column",
+      backgroundColor: "rgba(255,255,255,.5)",
+      borderRadius: "25px",
+      padding: "30px 25px",
+      backdropFilter: "blur(10px)",
+      margin: "0 20px",
       gap: "30px",
     },
-    item: {
+    header: {
       display: "flex",
-      alignItems: "center",
-      gap: "15px",
+      flexDirection: "column",
+      gap: "10px",
+    },
+    devider: {
+      width: "100%",
+      display: "flex",
+      borderBottom: "1px solid rgba(0, 0, 0, .5)",
     },
   };
 });

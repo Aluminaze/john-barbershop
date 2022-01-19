@@ -1,7 +1,9 @@
 import Typography from "@mui/material/Typography";
-import { Icons } from "components/Icons";
-import manImg from "./img/man.png";
+import { Services } from "components/Services";
+import { Location } from "components/Location";
 import { useStyles } from "./styles";
+
+import manImg from "./img/man.png";
 
 export const Intro = () => {
   const classes = useStyles();
@@ -12,30 +14,21 @@ export const Intro = () => {
         <img className={classes.img} src={manImg} alt="man-img" />
       </div>
       <div className={classes.right}>
-        <Typography variant="play_bold" sx={{ fontSize: "2rem" }}>
-          Добро пожаловать
-        </Typography>
-
-        <div className={classes.items}>
-          <div className={classes.item}>
-            <Icons.Location sx={{ fontSize: 40 }} />
-            <Typography variant="play_bold" sx={{ fontSize: "1.3rem" }}>
-              г. Калининград, ул. Багратиона, 43-47
-            </Typography>
-          </div>
-          <div className={classes.item}>
-            <Icons.Calendar sx={{ fontSize: 40 }} />
-            <Typography variant="play_bold" sx={{ fontSize: "1.3rem" }}>
-              7 дней в неделю
-            </Typography>
-          </div>
-          <div className={classes.item}>
-            <Icons.Time sx={{ fontSize: 40 }} />
-            <Typography variant="play_bold" sx={{ fontSize: "1.3rem" }}>
-              10:00 - 21:00
-            </Typography>
-          </div>
+        <div className={classes.header}>
+          <Typography variant="play_bold" sx={{ fontSize: "2rem" }}>
+            JOHN Barbershop
+          </Typography>
+          <Typography variant="play_regular" sx={{ fontSize: "1.4rem" }}>
+            Место, где ты приобретешь свой неповторимый и уникальный мужской
+            имидж
+          </Typography>
         </div>
+
+        <div className={classes.devider} />
+        <Services />
+
+        <div className={classes.devider} />
+        <Location />
       </div>
     </div>
   );
