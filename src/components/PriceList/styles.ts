@@ -32,7 +32,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
   },
   chairImg: {
     position: "absolute",
-    bottom: "10%",
+    bottom: "5%",
     right: 0,
     height: "300px",
   },
