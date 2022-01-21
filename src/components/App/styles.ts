@@ -32,7 +32,7 @@ export const useStyles = makeStyles((theme: Theme) => {
       flexDirection: "column",
     },
     block: {
-      height: "calc(100vh - 70px)",
+      minHeight: "calc(100vh - 70px)",
       width: "100%",
     },
     [theme.breakpoints.down("desktopM_1440")]: {

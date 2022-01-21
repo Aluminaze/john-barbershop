@@ -1,8 +1,8 @@
 import { Header } from "components/Header";
 import { useStyles } from "./styles";
-import Typography from "@mui/material/Typography";
 import { Intro } from "components/Intro";
 import { useAppTheme } from "hooks/useAppTheme";
+import { PriceList } from "components/PriceList";
 
 export function App() {
   const classes = useStyles();
@@ -26,9 +26,17 @@ export function App() {
           <section className={classes.section}>
             <div className={classes.container}>
               <div className={classes.block}>
-                <Typography variant="play_bold" sx={{ fontSize: "1.7rem" }}>
-                  BLOCK 2
-                </Typography>
+                <PriceList />
+              </div>
+            </div>
+          </section>
+          <section className={classes.section}>
+            <div className={classes.container}>
+              <div
+                className={classes.block}
+                style={{ border: "1px solid red" }}
+              >
+                BLOCK
               </div>
             </div>
           </section>
