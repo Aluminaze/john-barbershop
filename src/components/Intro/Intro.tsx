@@ -18,7 +18,7 @@ export const Intro = () => {
               Добро пожаловать!
             </Typography>
             <Typography variant="play_regular" sx={{ fontSize: "1.4rem" }}>
-              JOHN Barbershop - место, где ты приобретешь свой неповторимый и
+              JOHN Barber - место, где ты приобретешь свой неповторимый и
               уникальный мужской имидж
             </Typography>
           </div>
