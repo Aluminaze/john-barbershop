@@ -3,6 +3,7 @@ import { useStyles } from "./styles";
 import { Intro } from "components/Intro";
 import { useAppTheme } from "hooks/useAppTheme";
 import { PriceList } from "components/PriceList";
+import { About } from "components/About";
 
 export function App() {
   const classes = useStyles();
@@ -32,11 +33,8 @@ export function App() {
           </section>
           <section className={classes.section}>
             <div className={classes.container}>
-              <div
-                className={classes.block}
-                style={{ border: "1px solid red" }}
-              >
-                BLOCK
+              <div className={classes.block}>
+                <About />
               </div>
             </div>
           </section>
