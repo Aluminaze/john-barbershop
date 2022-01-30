@@ -23,12 +23,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
     minHeight: "240px",
     display: "flex",
     alignSelf: "center",
-    transition: "0.3s",
-
-    "&:hover": {
-      boxShadow: "-4px 23px 45px -2px rgba(60, 62, 64, 0.4)",
-      transform: "translateY(-5px)",
-    },
+    boxShadow: "-4px 23px 45px -2px rgba(60, 62, 64, 0.4)",
   },
   cardInfo: {
     flexGrow: 1,
