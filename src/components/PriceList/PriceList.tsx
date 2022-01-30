@@ -52,7 +52,7 @@ export const PriceList = () => {
 
         <div className={classes.category}>
           <Typography variant="play_bold" sx={{ fontSize: "1.7rem" }}>
-            Основные услуги
+            Основные
           </Typography>
           <div className={classes.list}>
             {services.map((service) => (
@@ -73,7 +73,7 @@ export const PriceList = () => {
 
         <div className={classes.category}>
           <Typography variant="play_bold" sx={{ fontSize: "1.7rem" }}>
-            Комплексные услуги
+            Комплексные
           </Typography>
           <div className={classes.list}>
             {complexServices.map((service) => (
@@ -94,7 +94,7 @@ export const PriceList = () => {
 
         <div className={classes.category}>
           <Typography variant="play_bold" sx={{ fontSize: "1.7rem" }}>
-            Дополнительные услуги
+            Дополнительные
           </Typography>
           <div className={classes.list}>
             {additionalServices.map((service) => (
