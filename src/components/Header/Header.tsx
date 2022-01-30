@@ -21,7 +21,7 @@ export const Header = () => {
       <div className={classes.container}>
         <div className={classes.headerLogo}>
           <Typography variant="play_bold" sx={{ fontSize: "1.7rem" }}>
-            JOHN Barbershop
+            JOHN Barber
           </Typography>
         </div>
 

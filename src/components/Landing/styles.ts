@@ -3,10 +3,6 @@ import makeStyles from "@mui/styles/makeStyles";
 
 export const useStyles = makeStyles((theme: Theme) => {
   return {
-    app: {
-      height: "100%",
-      overflow: "auto hidden",
-    },
     main: {
       height: "auto",
       width: "100%",

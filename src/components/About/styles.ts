@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     flexDirection: "column",
     gap: "40px",
-    padding: "50px 0",
+    padding: "100px 0 50px 0",
   },
   blockTitle: {
     display: "flex",
