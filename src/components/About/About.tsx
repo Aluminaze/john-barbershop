@@ -48,7 +48,7 @@ export const About = () => {
   return (
     <div className={classes.block}>
       <div className={classes.blockTitle}>
-        <Typography variant="play_bold" sx={{ fontSize: "2rem" }}>
+        <Typography variant="play_bold" className={classes.blockTitleText}>
           О нас
         </Typography>
       </div>
@@ -57,12 +57,14 @@ export const About = () => {
         {cards.map((cardItem) => (
           <div className={classes.card} key={cardItem.title}>
             <div
-              className={classes.cardImg}
+              className={classes.cardImgBlock}
               style={{ backgroundColor: cardItem.cardColor }}
             >
-              <div>
-                <img src={cardItem.img} alt={cardItem.title} />
-              </div>
+              <img
+                src={cardItem.img}
+                alt={cardItem.title}
+                className={classes.cardImg}
+              />
             </div>
             <div className={classes.cardInfo}>
               <Typography variant="play_bold" className={classes.cardInfoTitle}>

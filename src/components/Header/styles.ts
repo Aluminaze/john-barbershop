@@ -21,7 +21,11 @@ export const useStyles = makeStyles((theme: Theme) => {
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      padding: "0 1rem",
+      padding: "0 15px",
+
+      [theme.breakpoints.down("desktopS_960")]: {
+        padding: "0 10px",
+      },
     },
     headerLogo: {
       display: "flex",
