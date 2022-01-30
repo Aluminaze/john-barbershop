@@ -24,8 +24,8 @@ const services: IServiceList[] = [
 const complexServices: IServiceList[] = [
   { name: "Стрижка + коррекция бороды", price: 1500 },
   { name: "Стрижка + королевское бритьё", price: 1800 },
-  { name: "Стрижка+камуфляж", price: 1800 },
-  { name: "Коррекция бороды+камуфляж", price: 1400 },
+  { name: "Стрижка + камуфляж", price: 1800 },
+  { name: "Коррекция бороды + камуфляж", price: 1400 },
   { name: "Папа + сын", price: 1700 },
   { name: "Папа с бородой + сын", price: 2000 },
 ];
@@ -57,7 +57,7 @@ export const PriceList = () => {
           <div className={classes.list}>
             {services.map((service) => (
               <div className={classes.listItem}>
-                <Typography variant="play_bold" sx={{ fontSize: "1.3rem" }}>
+                <Typography variant="play_regular" sx={{ fontSize: "1.3rem" }}>
                   {service.name}
                 </Typography>
                 <Typography
@@ -78,7 +78,7 @@ export const PriceList = () => {
           <div className={classes.list}>
             {complexServices.map((service) => (
               <div className={classes.listItem}>
-                <Typography variant="play_bold" sx={{ fontSize: "1.3rem" }}>
+                <Typography variant="play_regular" sx={{ fontSize: "1.3rem" }}>
                   {service.name}
                 </Typography>
                 <Typography
@@ -99,7 +99,7 @@ export const PriceList = () => {
           <div className={classes.list}>
             {additionalServices.map((service) => (
               <div className={classes.listItem}>
-                <Typography variant="play_bold" sx={{ fontSize: "1.3rem" }}>
+                <Typography variant="play_regular" sx={{ fontSize: "1.3rem" }}>
                   {service.name}
                 </Typography>
                 <Typography

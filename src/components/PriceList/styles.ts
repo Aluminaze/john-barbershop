@@ -17,8 +17,13 @@ export const useStyles = makeStyles((theme: Theme) => ({
     padding: "50px 0",
     zIndex: 999,
     gap: "40px",
-    backgroundColor: "rgba(255,255,255,.4)",
-    backdropFilter: "blur(2px)",
+    backgroundColor: "rgba(255,255,255,.7)",
+    backdropFilter: "blur(6px)",
+
+    [theme.breakpoints.down("tablet_768")]: {
+      gap: "20px",
+      padding: "30px 0",
+    },
   },
   titleWrap: {
     display: "flex",
@@ -27,6 +32,10 @@ export const useStyles = makeStyles((theme: Theme) => ({
   title: {
     "&.MuiTypography-root": {
       fontSize: "2rem",
+
+      [theme.breakpoints.down("desktopS_960")]: {
+        fontSize: "1.7rem",
+      },
     },
   },
   shaveImg: {
@@ -38,6 +47,9 @@ export const useStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("desktopL_1680")]: {
       left: "5%",
     },
+    [theme.breakpoints.down("tablet_768")]: {
+      height: "250px",
+    },
   },
   chairImg: {
     position: "absolute",
@@ -48,11 +60,15 @@ export const useStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("desktopL_1680")]: {
       right: "5%",
     },
+    [theme.breakpoints.down("tablet_768")]: {
+      height: "250px",
+    },
   },
   category: {
     display: "flex",
     flexDirection: "column",
     gap: "15px",
+    padding: "0px 15px",
   },
   list: {
     display: "flex",
@@ -74,6 +90,10 @@ export const useStyles = makeStyles((theme: Theme) => ({
       "& span": {
         color: "#FFFFFF",
       },
+    },
+
+    [theme.breakpoints.down("desktopS_960")]: {
+      padding: "7px 15px",
     },
   },
 }));
