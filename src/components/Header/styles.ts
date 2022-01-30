@@ -28,5 +28,9 @@ export const useStyles = makeStyles((theme: Theme) => {
       alignItems: "center",
       gap: "10px",
     },
+    headerLogoImg: {
+      width: "30px",
+      height: "auto",
+    },
   };
 });
