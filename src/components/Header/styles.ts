@@ -31,6 +31,19 @@ export const useStyles = makeStyles((theme: Theme) => {
     headerLogoImg: {
       width: "30px",
       height: "auto",
+
+      [theme.breakpoints.down("tablet_768")]: {
+        width: "25px",
+      },
+    },
+    headerLogoText: {
+      "&.MuiTypography-root": {
+        fontSize: "1.7rem",
+
+        [theme.breakpoints.down("tablet_768")]: {
+          fontSize: "1.35rem",
+        },
+      },
     },
   };
 });

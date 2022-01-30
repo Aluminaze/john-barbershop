@@ -8,6 +8,7 @@ import { styled } from "@mui/material/styles";
 const CustomButton = styled(Button)(({ theme }) => ({
   color: theme.customColor.text.inverted.lightMode,
   backgroundColor: theme.customColor.green_pine,
+  lineHeight: 1,
 
   "&:hover": {
     backgroundColor: theme.customColor.green_pine,
@@ -26,7 +27,7 @@ export const Header = () => {
             src={scissorsImg}
             alt="scissorsImg"
           />
-          <Typography variant="play_bold" sx={{ fontSize: "1.7rem" }}>
+          <Typography variant="play_bold" className={classes.headerLogoText}>
             JOHN Barber
           </Typography>
         </div>

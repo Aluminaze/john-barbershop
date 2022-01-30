@@ -15,7 +15,7 @@ export const useStyles = makeStyles((theme: Theme) => {
       display: "flex",
       alignItems: "center",
       backgroundColor: "rgba(255,255,255,.5)",
-      borderRadius: "25px",
+      borderRadius: "8px",
       padding: "30px 25px",
       margin: "0 20px",
       gap: "30px",
@@ -25,6 +25,14 @@ export const useStyles = makeStyles((theme: Theme) => {
       },
       [theme.breakpoints.down("desktopS_960")]: {
         flexBasis: "90%",
+      },
+      [theme.breakpoints.down("tablet_768")]: {
+        backgroundColor: "rgba(255,255,255,.3)",
+        flexBasis: "100%",
+        height: "100%",
+        borderRadius: "0px",
+        margin: "0px 0px",
+        padding: "10px 20px",
       },
     },
     img: {
@@ -37,6 +45,10 @@ export const useStyles = makeStyles((theme: Theme) => {
       display: "flex",
       flexDirection: "column",
       gap: "30px",
+
+      [theme.breakpoints.down("tablet_768")]: {
+        gap: "15px",
+      },
     },
     header: {
       display: "flex",
@@ -46,6 +58,24 @@ export const useStyles = makeStyles((theme: Theme) => {
       display: "flex",
       flexDirection: "column",
       gap: "10px",
+    },
+    headerInfoTitleText: {
+      "&.MuiTypography-root": {
+        fontSize: "2rem",
+
+        [theme.breakpoints.down("desktopS_960")]: {
+          fontSize: "1.7rem",
+        },
+      },
+    },
+    headerInfoText: {
+      "&.MuiTypography-root": {
+        fontSize: "1.4rem",
+
+        [theme.breakpoints.down("desktopS_960")]: {
+          fontSize: "1.2rem",
+        },
+      },
     },
     devider: {
       width: "100%",

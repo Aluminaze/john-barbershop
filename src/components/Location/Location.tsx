@@ -13,19 +13,19 @@ export const Location = () => {
       <div className={classes.items}>
         <div className={classes.item}>
           <Icons.Location sx={{ fontSize: "30px" }} />
-          <Typography variant="play_regular" sx={{ fontSize: "1.3rem" }}>
+          <Typography variant="play_regular" className={classes.itemText}>
             г. Калининград, ул. Багратиона, 43-47
           </Typography>
         </div>
         <div className={classes.item}>
           <Icons.Calendar sx={{ fontSize: "30px" }} />
-          <Typography variant="play_regular" sx={{ fontSize: "1.3rem" }}>
+          <Typography variant="play_regular" className={classes.itemText}>
             7 дней в неделю
           </Typography>
         </div>
         <div className={classes.item}>
           <Icons.Time sx={{ fontSize: "30px" }} />
-          <Typography variant="play_regular" sx={{ fontSize: "1.3rem" }}>
+          <Typography variant="play_regular" className={classes.itemText}>
             10:00 - 21:00
           </Typography>
         </div>

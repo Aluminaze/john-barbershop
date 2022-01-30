@@ -18,5 +18,14 @@ export const useStyles = makeStyles((theme: Theme) => {
       alignItems: "center",
       gap: "10px",
     },
+    itemText: {
+      "&.MuiTypography-root": {
+        fontSize: "1.4rem",
+
+        [theme.breakpoints.down("desktopS_960")]: {
+          fontSize: "1.2rem",
+        },
+      },
+    },
   };
 });

@@ -29,10 +29,16 @@ export const Intro = () => {
               </div>
             )}
             <div className={classes.headerInfo}>
-              <Typography variant="play_bold" sx={{ fontSize: "2rem" }}>
+              <Typography
+                variant="play_bold"
+                className={classes.headerInfoTitleText}
+              >
                 Добро пожаловать!
               </Typography>
-              <Typography variant="play_regular" sx={{ fontSize: "1.4rem" }}>
+              <Typography
+                variant="play_regular"
+                className={classes.headerInfoText}
+              >
                 JOHN Barber - место, где ты приобретешь свой неповторимый и
                 уникальный мужской имидж
               </Typography>
