@@ -12,19 +12,19 @@ export const Location = () => {
       </Typography>
       <div className={classes.items}>
         <div className={classes.item}>
-          <Icons.Location sx={{ fontSize: 28 }} />
+          <Icons.Location sx={{ fontSize: "30px" }} />
           <Typography variant="play_regular" sx={{ fontSize: "1.3rem" }}>
             г. Калининград, ул. Багратиона, 43-47
           </Typography>
         </div>
         <div className={classes.item}>
-          <Icons.Calendar sx={{ fontSize: 28 }} />
+          <Icons.Calendar sx={{ fontSize: "30px" }} />
           <Typography variant="play_regular" sx={{ fontSize: "1.3rem" }}>
             7 дней в неделю
           </Typography>
         </div>
         <div className={classes.item}>
-          <Icons.Time sx={{ fontSize: 28 }} />
+          <Icons.Time sx={{ fontSize: "30px" }} />
           <Typography variant="play_regular" sx={{ fontSize: "1.3rem" }}>
             10:00 - 21:00
           </Typography>

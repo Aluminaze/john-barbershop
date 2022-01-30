@@ -27,7 +27,7 @@ const complexServices: IServiceList[] = [
   { name: "Стрижка+камуфляж", price: 1800 },
   { name: "Коррекция бороды+камуфляж", price: 1400 },
   { name: "Папа + сын", price: 1700 },
-  { name: "Папа с бородой+сын", price: 2000 },
+  { name: "Папа с бородой + сын", price: 2000 },
 ];
 
 const additionalServices: IServiceList[] = [
@@ -44,8 +44,8 @@ export const PriceList = () => {
       <img src={shaveImg} alt="shave-img" className={classes.shaveImg} />
       <img src={chairImg} alt="shave-img" className={classes.chairImg} />
       <div className={classes.content}>
-        <div className={classes.title}>
-          <Typography variant="play_bold" sx={{ fontSize: "2rem" }}>
+        <div className={classes.titleWrap}>
+          <Typography variant="play_bold" className={classes.title}>
             Услуги и цены
           </Typography>
         </div>

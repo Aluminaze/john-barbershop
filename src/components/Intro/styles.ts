@@ -9,15 +9,6 @@ export const useStyles = makeStyles((theme: Theme) => {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      gap: "40px",
-    },
-    left: {
-      flexBasis: "40%",
-      display: "flex",
-      justifyContent: "center",
-    },
-    img: {
-      maxWidth: "200px",
     },
     content: {
       flexBasis: "60%",
@@ -28,6 +19,19 @@ export const useStyles = makeStyles((theme: Theme) => {
       padding: "30px 25px",
       margin: "0 20px",
       gap: "30px",
+
+      [theme.breakpoints.down("desktopS_1280")]: {
+        flexBasis: "80%",
+      },
+      [theme.breakpoints.down("desktopS_960")]: {
+        flexBasis: "90%",
+      },
+    },
+    img: {
+      maxHeight: "500px",
+      [theme.breakpoints.down("desktopS_960")]: {
+        maxHeight: "80px",
+      },
     },
     info: {
       display: "flex",
@@ -35,6 +39,10 @@ export const useStyles = makeStyles((theme: Theme) => {
       gap: "30px",
     },
     header: {
+      display: "flex",
+      gap: "20px",
+    },
+    headerInfo: {
       display: "flex",
       flexDirection: "column",
       gap: "10px",

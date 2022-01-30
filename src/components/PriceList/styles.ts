@@ -20,21 +20,34 @@ export const useStyles = makeStyles((theme: Theme) => ({
     backgroundColor: "rgba(255,255,255,.4)",
     backdropFilter: "blur(2px)",
   },
-  title: {
+  titleWrap: {
     display: "flex",
     justifyContent: "center",
+  },
+  title: {
+    "&.MuiTypography-root": {
+      fontSize: "2rem",
+    },
   },
   shaveImg: {
     position: "absolute",
     top: "10%",
     left: 0,
     height: "350px",
+
+    [theme.breakpoints.down("desktopL_1680")]: {
+      left: "5%",
+    },
   },
   chairImg: {
     position: "absolute",
     bottom: "5%",
     right: 0,
     height: "300px",
+
+    [theme.breakpoints.down("desktopL_1680")]: {
+      right: "5%",
+    },
   },
   category: {
     display: "flex",
