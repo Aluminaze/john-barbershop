@@ -65,17 +65,15 @@ export const About = () => {
               </div>
             </div>
             <div className={classes.cardInfo}>
-              <Typography
-                variant="play_bold"
-                sx={{ fontSize: "1.8rem", color: "#ffffff" }}
-              >
+              <Typography variant="play_bold" className={classes.cardInfoTitle}>
                 {cardItem.title}
               </Typography>
 
-              <div className={classes.cardInfoText}>
+              <div className={classes.cardInfoTextWrap}>
                 {cardItem.info.map((infoText) => (
                   <Typography
                     variant="play_regular"
+                    className={classes.cardInfoText}
                     sx={{ fontSize: "1.4rem", color: "#e5e7eb" }}
                   >
                     {infoText}

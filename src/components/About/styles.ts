@@ -34,15 +34,35 @@ export const useStyles = makeStyles((theme: Theme) => ({
     gap: "20px",
     backgroundColor: "#0a2533",
   },
+  cardInfoTitle: {
+    "&.MuiTypography-root": {
+      color: "#ffffff",
+      fontSize: "1.8rem",
+
+      [theme.breakpoints.down("desktopL_1680")]: {
+        fontSize: "1.6rem",
+      },
+    },
+  },
   cardImg: {
     display: "flex",
     flexBasis: "35%",
     justifyContent: "center",
     alignItems: "center",
   },
-  cardInfoText: {
+  cardInfoTextWrap: {
     display: "flex",
     flexDirection: "column",
     gap: "15px",
+  },
+  cardInfoText: {
+    "&.MuiTypography-root": {
+      color: "#e5e7eb",
+      fontSize: "1.4rem",
+
+      [theme.breakpoints.down("desktopL_1680")]: {
+        fontSize: "1.2rem",
+      },
+    },
   },
 }));
