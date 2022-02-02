@@ -76,7 +76,6 @@ export const About = () => {
                   <Typography
                     variant="play_regular"
                     className={classes.cardInfoText}
-                    sx={{ fontSize: "1.4rem", color: "#e5e7eb" }}
                   >
                     {infoText}
                   </Typography>

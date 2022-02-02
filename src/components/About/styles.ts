@@ -96,7 +96,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
       color: "#e5e7eb",
       fontSize: "1.4rem",
 
-      [theme.breakpoints.down("desktopL_1680")]: {
+      [theme.breakpoints.down("desktopS_960")]: {
         fontSize: "1.2rem",
       },
     },
