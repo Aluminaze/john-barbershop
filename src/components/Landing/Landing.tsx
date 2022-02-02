@@ -4,6 +4,7 @@ import { useAppTheme } from "hooks/useAppTheme";
 import { PriceList } from "components/PriceList";
 import { About } from "components/About";
 import { Footer } from "components/Footer";
+import { SECTION } from "variables";
 
 export const Landing = () => {
   const classes = useStyles();
@@ -11,9 +12,10 @@ export const Landing = () => {
 
   return (
     <>
-      <main className={classes.main} style={{ marginTop: "70px" }}>
+      <main className={classes.main}>
         <article className={classes.acticle}>
           <section
+            id={SECTION.INTRO}
             className={classes.section}
             style={{ backgroundColor: theme.customColor.green_pine }}
           >
@@ -23,14 +25,14 @@ export const Landing = () => {
               </div>
             </div>
           </section>
-          <section className={classes.section}>
+          <section id={SECTION.PRICE_LIST} className={classes.section}>
             <div className={classes.container}>
               <div className={classes.block}>
                 <PriceList />
               </div>
             </div>
           </section>
-          <section className={classes.section}>
+          <section id={SECTION.ABOUT} className={classes.section}>
             <div className={classes.container}>
               <div className={classes.block}>
                 <About />
@@ -40,6 +42,7 @@ export const Landing = () => {
         </article>
       </main>
       <footer
+        id={SECTION.FOOTER}
         className={classes.main}
         style={{ backgroundColor: theme.customColor.green_pine }}
       >

@@ -2,8 +2,10 @@ import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { useStyles } from "./styles";
 import scissorsImg from "./img/scissors.png";
+import { Link } from "react-scroll";
 
 import { styled } from "@mui/material/styles";
+import { SECTION } from "variables";
 
 const CustomButton = styled(Button)(({ theme }) => ({
   color: theme.customColor.text.inverted.lightMode,
@@ -31,6 +33,29 @@ export const Header = () => {
             JOHN Barber
           </Typography>
         </div>
+
+        <ul className={classes.nav}>
+          <li className={classes.navLink}>
+            <Link to={SECTION.INTRO} spy={true} smooth={true} duration={500}>
+              <Typography variant="play_regular">Главная</Typography>
+            </Link>
+          </li>
+          <li className={classes.navLink}>
+            <Link
+              to={SECTION.PRICE_LIST}
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              <Typography variant="play_regular">Усулуги и цены</Typography>
+            </Link>
+          </li>
+          <li className={classes.navLink}>
+            <Link to={SECTION.ABOUT} spy={true} smooth={true} duration={500}>
+              <Typography variant="play_regular">О нас</Typography>
+            </Link>
+          </li>
+        </ul>
 
         <CustomButton variant="contained" sx={{ fontSize: "1rem" }}>
           Записаться онлайн

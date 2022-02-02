@@ -49,5 +49,18 @@ export const useStyles = makeStyles((theme: Theme) => {
         },
       },
     },
+    nav: {
+      display: "flex",
+      gap: "10px",
+    },
+    navLink: {
+      padding: "5px 0",
+
+      "& > .active": {
+        padding: "5px 0",
+        borderBottom: "2px solid",
+        borderBottomColor: theme.customColor.green_pine,
+      },
+    },
   };
 });
