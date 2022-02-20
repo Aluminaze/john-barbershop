@@ -56,7 +56,10 @@ export const PriceList = () => {
           </Typography>
           <div className={classes.list}>
             {services.map((service) => (
-              <div className={classes.listItem}>
+              <div
+                key={service.name + service.price}
+                className={classes.listItem}
+              >
                 <Typography variant="play_regular" sx={{ fontSize: "1.3rem" }}>
                   {service.name}
                 </Typography>
@@ -77,7 +80,10 @@ export const PriceList = () => {
           </Typography>
           <div className={classes.list}>
             {complexServices.map((service) => (
-              <div className={classes.listItem}>
+              <div
+                key={service.name + service.price}
+                className={classes.listItem}
+              >
                 <Typography variant="play_regular" sx={{ fontSize: "1.3rem" }}>
                   {service.name}
                 </Typography>
@@ -98,7 +104,10 @@ export const PriceList = () => {
           </Typography>
           <div className={classes.list}>
             {additionalServices.map((service) => (
-              <div className={classes.listItem}>
+              <div
+                key={service.name + service.price}
+                className={classes.listItem}
+              >
                 <Typography variant="play_regular" sx={{ fontSize: "1.3rem" }}>
                   {service.name}
                 </Typography>

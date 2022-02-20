@@ -56,7 +56,7 @@ export const About = () => {
 
       <div className={classes.cards}>
         {cards.map((cardItem) => (
-          <div className={classes.card} key={cardItem.title}>
+          <div key={cardItem.title} className={classes.card}>
             <div className={classes.cardImgBlock}>
               <img
                 src={decorImg}
@@ -75,8 +75,9 @@ export const About = () => {
               </Typography>
 
               <div className={classes.cardInfoTextWrap}>
-                {cardItem.info.map((infoText) => (
+                {cardItem.info.map((infoText, index) => (
                   <Typography
+                    key={index}
                     variant="play_regular"
                     className={classes.cardInfoText}
                   >
