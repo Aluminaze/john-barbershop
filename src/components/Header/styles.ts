@@ -54,12 +54,24 @@ export const useStyles = makeStyles((theme: Theme) => {
       gap: "10px",
     },
     navLink: {
-      padding: "5px 0",
+      padding: "6px 0",
+      position: "relative",
+      cursor: "pointer",
 
-      "& > .active": {
-        padding: "5px 0",
-        borderBottom: "2px solid",
-        borderBottomColor: theme.customColor.green_pine,
+      "& > ::before": {
+        content: "''",
+        position: "absolute",
+        left: "auto",
+        bottom: 0,
+        width: "0px",
+        height: "2px",
+        background: theme.customColor.green_pine,
+        transition: "all 0.3s",
+      },
+
+      "& > .active::before": {
+        left: 0,
+        width: "100%",
       },
     },
   };
