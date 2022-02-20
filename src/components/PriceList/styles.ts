@@ -81,19 +81,19 @@ export const useStyles = makeStyles((theme: Theme) => ({
     padding: "10px 15px",
     borderBottom: "1px solid",
     borderColor: "#000000",
-    transition: "all 0.3s ease-out",
-
-    "&:hover": {
-      backgroundColor: theme.customColor.green_pine,
-      borderColor: "#FFFFFF",
-
-      "& span": {
-        color: "#FFFFFF",
-      },
-    },
 
     [theme.breakpoints.down("desktopS_960")]: {
       padding: "7px 15px",
+    },
+    [theme.breakpoints.down("tablet_768")]: {
+      padding: "7px 0px",
+    },
+  },
+  listItemPrice: {
+    "&.MuiTypography-root": {
+      fontSize: "1.3rem",
+      minWidth: "70px",
+      textAlign: "right",
     },
   },
 }));

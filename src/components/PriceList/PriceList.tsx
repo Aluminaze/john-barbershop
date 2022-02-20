@@ -62,7 +62,7 @@ export const PriceList = () => {
                 </Typography>
                 <Typography
                   variant="play_bold"
-                  sx={{ fontSize: "1.3rem", minWidth: "60px" }}
+                  className={classes.listItemPrice}
                 >
                   {service.price} ₽
                 </Typography>
@@ -83,7 +83,7 @@ export const PriceList = () => {
                 </Typography>
                 <Typography
                   variant="play_bold"
-                  sx={{ fontSize: "1.3rem", minWidth: "60px" }}
+                  className={classes.listItemPrice}
                 >
                   {service.price} ₽
                 </Typography>
@@ -104,7 +104,7 @@ export const PriceList = () => {
                 </Typography>
                 <Typography
                   variant="play_bold"
-                  sx={{ fontSize: "1.3rem", minWidth: "60px" }}
+                  className={classes.listItemPrice}
                 >
                   {service.price} ₽
                 </Typography>
