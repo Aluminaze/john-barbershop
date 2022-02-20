@@ -5,6 +5,7 @@ import { PriceList } from "components/PriceList";
 import { About } from "components/About";
 import { Footer } from "components/Footer";
 import { SECTION } from "variables";
+import bgImg from "./img/bg1.png";
 
 export const Landing = () => {
   const classes = useStyles();
@@ -14,11 +15,13 @@ export const Landing = () => {
     <>
       <main className={classes.main}>
         <article className={classes.acticle}>
-          <section
-            id={SECTION.INTRO}
-            className={classes.section}
-            style={{ backgroundColor: theme.customColor.green_pine }}
-          >
+          <section id={SECTION.INTRO} className={classes.section}>
+            <div
+              className={classes.sectionBackground}
+              style={{
+                backgroundImage: `url(${bgImg})`,
+              }}
+            />
             <div className={classes.container}>
               <div className={classes.block}>
                 <Intro />

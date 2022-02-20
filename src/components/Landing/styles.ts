@@ -19,6 +19,16 @@ export const useStyles = makeStyles((theme: Theme) => {
       height: "100%",
       display: "flex",
       justifyContent: "center",
+      position: "relative",
+    },
+    sectionBackground: {
+      zIndex: -1,
+      backgroundRepeat: "repeat",
+      position: "absolute",
+      left: 0,
+      right: 0,
+      top: 0,
+      bottom: 0,
     },
     container: {
       height: "100%",
