@@ -18,6 +18,13 @@ export const useStyles = makeStyles((theme: Theme) => ({
     alignItems: "center",
     gap: "15px",
   },
+  link: {
+    transition: "0.3s",
+
+    "&:hover": {
+      transform: "translateY(-7px)",
+    },
+  },
   copyright: {
     display: "flex",
     gap: "8px",
