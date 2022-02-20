@@ -8,6 +8,7 @@ import { styled } from "@mui/material/styles";
 import { SECTION } from "variables";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useAppTheme } from "hooks/useAppTheme";
+import { config } from "config";
 
 const CustomButton = styled(Button)(({ theme }) => ({
   color: theme.customColor.text.inverted.lightMode,
@@ -25,6 +26,10 @@ export const Header = () => {
   const isMoreThanTablet768px = useMediaQuery(
     theme.breakpoints.up("tablet_768")
   );
+
+  const handleSignUp = (): void => {
+    window.location.href = config.yclients;
+  };
 
   return (
     <div className={classes.header}>
@@ -84,7 +89,11 @@ export const Header = () => {
           </ul>
         )}
 
-        <CustomButton variant="contained" sx={{ fontSize: "1rem" }}>
+        <CustomButton
+          variant="contained"
+          sx={{ fontSize: "1rem" }}
+          onClick={handleSignUp}
+        >
           Записаться онлайн
         </CustomButton>
       </div>
