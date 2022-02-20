@@ -43,7 +43,7 @@ export const Landing = () => {
       </main>
       <footer
         id={SECTION.FOOTER}
-        className={classes.main}
+        className={classes.footer}
         style={{ backgroundColor: theme.customColor.green_pine }}
       >
         <div className={classes.container}>

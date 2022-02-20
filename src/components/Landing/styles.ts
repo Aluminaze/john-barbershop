@@ -36,5 +36,10 @@ export const useStyles = makeStyles((theme: Theme) => {
         width: "100%",
       },
     },
+    footer: {
+      display: "flex",
+      justifyContent: "center",
+      flexGrow: 1,
+    },
   };
 });

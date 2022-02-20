@@ -6,11 +6,11 @@ export const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "15px 20px",
+    padding: "35px 20px",
     gap: "20px",
 
     [theme.breakpoints.down("desktopS_960")]: {
-      padding: "10px",
+      padding: "25px 20px 35px 20px",
     },
   },
   links: {
