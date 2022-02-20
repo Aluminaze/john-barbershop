@@ -3,6 +3,7 @@ import { useStyles } from "./styles";
 import teamImg from "./img/team.png";
 import staffImg from "./img/staff.png";
 import networkImg from "./img/network.png";
+import decorImg from "./img/decor.png";
 
 interface ICardStruct {
   img: any;
@@ -56,10 +57,12 @@ export const About = () => {
       <div className={classes.cards}>
         {cards.map((cardItem) => (
           <div className={classes.card} key={cardItem.title}>
-            <div
-              className={classes.cardImgBlock}
-              style={{ backgroundColor: cardItem.cardColor }}
-            >
+            <div className={classes.cardImgBlock}>
+              <img
+                src={decorImg}
+                alt="decorImg"
+                className={classes.cardDecorImg}
+              />
               <img
                 src={cardItem.img}
                 alt={cardItem.title}

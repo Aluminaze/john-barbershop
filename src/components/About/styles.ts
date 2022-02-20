@@ -34,6 +34,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 
     [theme.breakpoints.down("tablet_768")]: {
       gap: "15px",
+      padding: "0 20px",
     },
   },
   card: {
@@ -49,6 +50,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
 
     [theme.breakpoints.down("tablet_768")]: {
       width: "100%",
+      flexDirection: "column",
     },
   },
   cardInfo: {
@@ -75,14 +77,25 @@ export const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   cardImgBlock: {
+    position: "relative",
     display: "flex",
     flexBasis: "35%",
     justifyContent: "center",
     alignItems: "center",
+
+    [theme.breakpoints.down("tablet_768")]: {
+      padding: "20px 0",
+    },
+  },
+  cardDecorImg: {
+    position: "absolute",
+    left: 0,
+    top: 0,
+    height: "40%",
   },
   cardImg: {
     [theme.breakpoints.down("tablet_768")]: {
-      width: "50%",
+      width: "100px",
       heigh: "auto",
     },
   },
