@@ -51,7 +51,7 @@ export const useStyles = makeStyles((theme: Theme) => {
     },
     nav: {
       display: "flex",
-      gap: "10px",
+      gap: "25px",
     },
     navLink: {
       padding: "6px 0",
