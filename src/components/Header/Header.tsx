@@ -40,7 +40,7 @@ export const Header = () => {
             src={scissorsImg}
             alt="scissorsImg"
           />
-          <Typography variant="play_bold" className={classes.headerLogoText}>
+          <Typography variant="exo2_bold" className={classes.headerLogoText}>
             JOHN Barber
           </Typography>
         </div>
@@ -55,7 +55,7 @@ export const Header = () => {
                 duration={500}
                 offset={-10}
               >
-                <Typography variant="play_regular" sx={{ fontSize: "1.2rem" }}>
+                <Typography variant="exo2_regular" sx={{ fontSize: "1.2rem" }}>
                   Главная
                 </Typography>
               </Link>
@@ -68,7 +68,7 @@ export const Header = () => {
                 duration={500}
                 offset={10}
               >
-                <Typography variant="play_regular" sx={{ fontSize: "1.2rem" }}>
+                <Typography variant="exo2_regular" sx={{ fontSize: "1.2rem" }}>
                   Усулуги и цены
                 </Typography>
               </Link>
@@ -81,7 +81,7 @@ export const Header = () => {
                 duration={500}
                 offset={10}
               >
-                <Typography variant="play_regular" sx={{ fontSize: "1.2rem" }}>
+                <Typography variant="exo2_regular" sx={{ fontSize: "1.2rem" }}>
                   О нас
                 </Typography>
               </Link>

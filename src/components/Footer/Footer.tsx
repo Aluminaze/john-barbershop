@@ -36,13 +36,13 @@ export const Footer = () => {
       </div>
       <div className={classes.copyright}>
         <Typography
-          variant="play_bold"
+          variant="exo2_bold"
           className={classes.copyrightText}
           noWrap
         >
           &copy; {new Date().getFullYear()}
         </Typography>
-        <Typography variant="play_bold" className={classes.copyrightText}>
+        <Typography variant="exo2_bold" className={classes.copyrightText}>
           JOHN Barber
         </Typography>
       </div>

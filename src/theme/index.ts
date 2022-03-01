@@ -1,10 +1,10 @@
 import { createTheme } from "@mui/material/styles";
 
 import {
-  play_regular_styles,
-  play_bold_styles,
-  PLAY_REGULAR,
-  PLAY_BOLD,
+  exo2_regular_styles,
+  exo2_bold_styles,
+  EXO2_REGULAR,
+  EXO2_BOLD,
 } from "./theme-variables";
 
 declare module "@mui/material/styles" {
@@ -320,12 +320,12 @@ declare module "@mui/material/styles" {
   }
 
   interface TypographyVariants {
-    play_regular: React.CSSProperties;
-    play_bold: React.CSSProperties;
+    exo2_regular: React.CSSProperties;
+    exo2_bold: React.CSSProperties;
   }
   interface TypographyVariantsOptions {
-    play_regular?: React.CSSProperties;
-    play_bold?: React.CSSProperties;
+    exo2_regular?: React.CSSProperties;
+    exo2_bold?: React.CSSProperties;
   }
 }
 declare module "@mui/material/Typography" {
@@ -342,8 +342,8 @@ declare module "@mui/material/Typography" {
     h4: false;
     h5: false;
     h6: false;
-    play_regular: true;
-    play_bold: true;
+    exo2_regular: true;
+    exo2_bold: true;
   }
 }
 
@@ -360,7 +360,7 @@ const theme = createTheme({
           color: "#1D2023",
         },
         tooltip: {
-          ...play_regular_styles,
+          ...exo2_regular_styles,
           color: "#FFFFFF",
           backgroundColor: "#1D2023",
           padding: "10px 12px",
@@ -370,16 +370,16 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: [PLAY_REGULAR, "sans serif", "Segoe UI"].join(","),
-    play_regular: {
-      fontFamily: PLAY_REGULAR,
+    fontFamily: [EXO2_REGULAR, "sans serif", "Segoe UI"].join(","),
+    exo2_regular: {
+      fontFamily: EXO2_REGULAR,
       fontWeight: 400,
-      ...play_regular_styles,
+      ...exo2_regular_styles,
     },
-    play_bold: {
-      fontFamily: PLAY_BOLD,
+    exo2_bold: {
+      fontFamily: EXO2_BOLD,
       fontWeight: 700,
-      ...play_bold_styles,
+      ...exo2_bold_styles,
     },
   },
   breakpoints: {

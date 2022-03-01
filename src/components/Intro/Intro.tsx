@@ -30,13 +30,13 @@ export const Intro = () => {
             )}
             <div className={classes.headerInfo}>
               <Typography
-                variant="play_bold"
+                variant="exo2_bold"
                 className={classes.headerInfoTitleText}
               >
                 Добро пожаловать!
               </Typography>
               <Typography
-                variant="play_regular"
+                variant="exo2_regular"
                 className={classes.headerInfoText}
               >
                 JOHN Barber - место, где ты приобретешь свой неповторимый и

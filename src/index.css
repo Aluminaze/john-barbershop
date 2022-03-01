@@ -1,8 +1,8 @@
-@font-face {
+/* @font-face {
   font-family: "Play-Regular";
   src: url(./fonts/play-regular/play-regular.woff2) format("woff2"),
     url(./fonts/play-regular/play-regular.woff2) format("woff");
-}
+} */
 
 @font-face {
   font-family: "Play-Bold";
@@ -10,15 +10,27 @@
     url(./fonts/play-bold/play-bold.woff) format("woff");
 }
 
+@font-face {
+  font-family: "Exo2Regular";
+  src: url(./fonts/exo2/exo2.woff2) format("woff2"),
+    url(./fonts/exo2/exo2.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Exo2Bold";
+  src: url(./fonts/exo2Bold/exo2bold.woff2) format("woff2"),
+    url(./fonts/exo2Bold/exo2bold.woff) format("woff");
+}
+
 body {
   margin: 0;
-  font-family: "Play-Regular", "Roboto", sans-serif;
+  font-family: "Exo2Regular", "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: "Play-Regular", "Courier New", monospace;
+  font-family: "Exo2Regular", "Courier New", monospace;
 }
 
 *,

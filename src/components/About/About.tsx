@@ -48,7 +48,7 @@ export const About = () => {
   return (
     <div className={classes.block}>
       <div className={classes.blockTitle}>
-        <Typography variant="play_bold" className={classes.blockTitleText}>
+        <Typography variant="exo2_bold" className={classes.blockTitleText}>
           О нас
         </Typography>
       </div>
@@ -69,7 +69,7 @@ export const About = () => {
               />
             </div>
             <div className={classes.cardInfo}>
-              <Typography variant="play_bold" className={classes.cardInfoTitle}>
+              <Typography variant="exo2_bold" className={classes.cardInfoTitle}>
                 {cardItem.title}
               </Typography>
 
@@ -77,7 +77,7 @@ export const About = () => {
                 {cardItem.info.map((infoText, index) => (
                   <Typography
                     key={index}
-                    variant="play_regular"
+                    variant="exo2_regular"
                     className={classes.cardInfoText}
                   >
                     {infoText}

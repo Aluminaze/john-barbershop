@@ -45,13 +45,13 @@ export const PriceList = () => {
       <img src={chairImg} alt="shave-img" className={classes.chairImg} />
       <div className={classes.content}>
         <div className={classes.titleWrap}>
-          <Typography variant="play_bold" className={classes.title}>
+          <Typography variant="exo2_bold" className={classes.title}>
             Услуги и цены
           </Typography>
         </div>
 
         <div className={classes.category}>
-          <Typography variant="play_bold" sx={{ fontSize: "1.7rem" }}>
+          <Typography variant="exo2_bold" sx={{ fontSize: "1.7rem" }}>
             Основные
           </Typography>
           <div className={classes.list}>
@@ -60,11 +60,11 @@ export const PriceList = () => {
                 key={service.name + service.price}
                 className={classes.listItem}
               >
-                <Typography variant="play_regular" sx={{ fontSize: "1.3rem" }}>
+                <Typography variant="exo2_regular" sx={{ fontSize: "1.3rem" }}>
                   {service.name}
                 </Typography>
                 <Typography
-                  variant="play_bold"
+                  variant="exo2_bold"
                   className={classes.listItemPrice}
                 >
                   {service.price} ₽
@@ -75,7 +75,7 @@ export const PriceList = () => {
         </div>
 
         <div className={classes.category}>
-          <Typography variant="play_bold" sx={{ fontSize: "1.7rem" }}>
+          <Typography variant="exo2_bold" sx={{ fontSize: "1.7rem" }}>
             Комплексные
           </Typography>
           <div className={classes.list}>
@@ -84,11 +84,11 @@ export const PriceList = () => {
                 key={service.name + service.price}
                 className={classes.listItem}
               >
-                <Typography variant="play_regular" sx={{ fontSize: "1.3rem" }}>
+                <Typography variant="exo2_regular" sx={{ fontSize: "1.3rem" }}>
                   {service.name}
                 </Typography>
                 <Typography
-                  variant="play_bold"
+                  variant="exo2_bold"
                   className={classes.listItemPrice}
                 >
                   {service.price} ₽
@@ -99,7 +99,7 @@ export const PriceList = () => {
         </div>
 
         <div className={classes.category}>
-          <Typography variant="play_bold" sx={{ fontSize: "1.7rem" }}>
+          <Typography variant="exo2_bold" sx={{ fontSize: "1.7rem" }}>
             Дополнительные
           </Typography>
           <div className={classes.list}>
@@ -108,11 +108,11 @@ export const PriceList = () => {
                 key={service.name + service.price}
                 className={classes.listItem}
               >
-                <Typography variant="play_regular" sx={{ fontSize: "1.3rem" }}>
+                <Typography variant="exo2_regular" sx={{ fontSize: "1.3rem" }}>
                   {service.name}
                 </Typography>
                 <Typography
-                  variant="play_bold"
+                  variant="exo2_bold"
                   className={classes.listItemPrice}
                 >
                   {service.price} ₽

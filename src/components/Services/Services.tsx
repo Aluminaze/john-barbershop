@@ -10,7 +10,7 @@ export const Services = () => {
 
   return (
     <div className={classes.block}>
-      <Typography variant="play_bold" sx={{ fontSize: "1.4rem" }}>
+      <Typography variant="exo2_bold" sx={{ fontSize: "1.4rem" }}>
         Наши услуги
       </Typography>
       <div className={classes.items}>
@@ -18,7 +18,7 @@ export const Services = () => {
           <div>
             <img className={classes.img} src={haircutImg} alt="haircut-img" />
           </div>
-          <Typography variant="play_regular" className={classes.itemText}>
+          <Typography variant="exo2_regular" className={classes.itemText}>
             Стрижка
           </Typography>
         </div>
@@ -26,7 +26,7 @@ export const Services = () => {
           <div>
             <img className={classes.img} src={shavingImg} alt="shaving-img" />
           </div>
-          <Typography variant="play_regular" className={classes.itemText}>
+          <Typography variant="exo2_regular" className={classes.itemText}>
             Бритье
           </Typography>
         </div>
@@ -34,7 +34,7 @@ export const Services = () => {
           <div>
             <img className={classes.img} src={careImg} alt="care-img" />
           </div>
-          <Typography variant="play_regular" className={classes.itemText}>
+          <Typography variant="exo2_regular" className={classes.itemText}>
             Уход
           </Typography>
         </div>
