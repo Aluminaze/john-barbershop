@@ -40,7 +40,7 @@ export const Header = () => {
             src={scissorsImg}
             alt="scissorsImg"
           />
-          <Typography variant="exo2_bold" className={classes.headerLogoText}>
+          <Typography variant="play_bold" className={classes.headerLogoText}>
             JOHN Barber
           </Typography>
         </div>

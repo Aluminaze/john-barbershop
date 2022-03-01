@@ -5,6 +5,8 @@ import {
   exo2_bold_styles,
   EXO2_REGULAR,
   EXO2_BOLD,
+  PLAY_BOLD,
+  play_bold_styles,
 } from "./theme-variables";
 
 declare module "@mui/material/styles" {
@@ -322,10 +324,12 @@ declare module "@mui/material/styles" {
   interface TypographyVariants {
     exo2_regular: React.CSSProperties;
     exo2_bold: React.CSSProperties;
+    play_bold: React.CSSProperties;
   }
   interface TypographyVariantsOptions {
     exo2_regular?: React.CSSProperties;
     exo2_bold?: React.CSSProperties;
+    play_bold?: React.CSSProperties;
   }
 }
 declare module "@mui/material/Typography" {
@@ -344,6 +348,7 @@ declare module "@mui/material/Typography" {
     h6: false;
     exo2_regular: true;
     exo2_bold: true;
+    play_bold: true;
   }
 }
 
@@ -380,6 +385,11 @@ const theme = createTheme({
       fontFamily: EXO2_BOLD,
       fontWeight: 700,
       ...exo2_bold_styles,
+    },
+    play_bold: {
+      fontFamily: PLAY_BOLD,
+      fontWeight: 700,
+      ...play_bold_styles,
     },
   },
   breakpoints: {

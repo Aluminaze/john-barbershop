@@ -42,7 +42,7 @@ export const Footer = () => {
         >
           &copy; {new Date().getFullYear()}
         </Typography>
-        <Typography variant="exo2_bold" className={classes.copyrightText}>
+        <Typography variant="play_bold" className={classes.copyrightText}>
           JOHN Barber
         </Typography>
       </div>
