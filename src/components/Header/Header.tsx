@@ -9,6 +9,26 @@ import { SECTION } from "variables";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useAppTheme } from "hooks/useAppTheme";
 import { config } from "config";
+import { motion } from "framer-motion";
+
+const navVar = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1, delayChildren: 0.3 },
+  },
+};
+
+const navItemVar = {
+  hidden: {
+    x: -25,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+  },
+};
 
 const CustomButton = styled(Button)(({ theme }) => ({
   color: theme.customColor.text.inverted.lightMode,
@@ -46,8 +66,13 @@ export const Header = () => {
         </div>
 
         {isMoreThanTablet768px && (
-          <ul className={classes.nav}>
-            <li className={classes.navLink}>
+          <motion.ul
+            variants={navVar}
+            initial="hidden"
+            whileInView="visible"
+            className={classes.nav}
+          >
+            <motion.li variants={navItemVar} className={classes.navLink}>
               <Link
                 to={SECTION.INTRO}
                 spy={true}
@@ -59,8 +84,8 @@ export const Header = () => {
                   Главная
                 </Typography>
               </Link>
-            </li>
-            <li className={classes.navLink}>
+            </motion.li>
+            <motion.li variants={navItemVar} className={classes.navLink}>
               <Link
                 to={SECTION.PRICE_LIST}
                 spy={true}
@@ -72,8 +97,8 @@ export const Header = () => {
                   Усулуги и цены
                 </Typography>
               </Link>
-            </li>
-            <li className={classes.navLink}>
+            </motion.li>
+            <motion.li variants={navItemVar} className={classes.navLink}>
               <Link
                 to={SECTION.ABOUT}
                 spy={true}
@@ -85,8 +110,8 @@ export const Header = () => {
                   О нас
                 </Typography>
               </Link>
-            </li>
-          </ul>
+            </motion.li>
+          </motion.ul>
         )}
 
         <CustomButton
