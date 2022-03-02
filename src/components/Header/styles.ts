@@ -54,7 +54,7 @@ export const useStyles = makeStyles((theme: Theme) => {
       gap: "25px",
     },
     navLink: {
-      padding: "6px 0",
+      padding: "10px 0",
       position: "relative",
       cursor: "pointer",
 
