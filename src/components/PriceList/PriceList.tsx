@@ -2,10 +2,16 @@ import Typography from "@mui/material/Typography";
 import { useStyles } from "./styles";
 import shaveImg from "./img/shave.png";
 import chairImg from "./img/chair.png";
+import { motion } from "framer-motion";
 
 interface IServiceList {
   name: string;
   price: number;
+}
+
+interface ICategoryList {
+  title: string;
+  data: IServiceList[];
 }
 
 const services: IServiceList[] = [
@@ -36,6 +42,65 @@ const additionalServices: IServiceList[] = [
   { name: "Воск", price: 400 },
 ];
 
+const categories: ICategoryList[] = [
+  {
+    title: "Основные",
+    data: services,
+  },
+  {
+    title: "Комплексные",
+    data: complexServices,
+  },
+  {
+    title: "Дополнительные",
+    data: additionalServices,
+  },
+];
+
+const titleVar = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: (custom: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: custom * 0.2 },
+  }),
+};
+
+const categoryTitleVar = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: (custom: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: custom * 0.2 },
+  }),
+};
+
+const categoryListVar = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.05,
+    },
+  },
+};
+
+const categoryListItemVar = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 export const PriceList = () => {
   const classes = useStyles();
 
@@ -44,83 +109,62 @@ export const PriceList = () => {
       <img src={shaveImg} alt="shave-img" className={classes.shaveImg} />
       <img src={chairImg} alt="shave-img" className={classes.chairImg} />
       <div className={classes.content}>
-        <div className={classes.titleWrap}>
+        <motion.div
+          className={classes.titleWrap}
+          variants={titleVar}
+          initial="hidden"
+          custom={1}
+          whileInView="visible"
+          viewport={{ amount: 0.3, once: true }}
+        >
           <Typography variant="exo2_bold" className={classes.title}>
             Услуги и цены
           </Typography>
-        </div>
+        </motion.div>
 
-        <div className={classes.category}>
-          <Typography variant="exo2_bold" sx={{ fontSize: "1.7rem" }}>
-            Основные
-          </Typography>
-          <div className={classes.list}>
-            {services.map((service) => (
-              <div
-                key={service.name + service.price}
-                className={classes.listItem}
-              >
-                <Typography variant="exo2_regular" sx={{ fontSize: "1.3rem" }}>
-                  {service.name}
-                </Typography>
-                <Typography
-                  variant="exo2_bold"
-                  className={classes.listItemPrice}
+        {categories.map((category) => (
+          <div className={classes.category}>
+            <motion.div
+              variants={categoryTitleVar}
+              initial="hidden"
+              whileInView="visible"
+              custom={1}
+              viewport={{ amount: 0.4, once: true }}
+            >
+              <Typography variant="exo2_bold" sx={{ fontSize: "1.7rem" }}>
+                {category.title}
+              </Typography>
+            </motion.div>
+            <motion.div
+              className={classes.list}
+              variants={categoryListVar}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ amount: 0.2, once: true }}
+            >
+              {category.data.map((service) => (
+                <motion.div
+                  key={service.name + service.price}
+                  className={classes.listItem}
+                  variants={categoryListItemVar}
                 >
-                  {service.price} ₽
-                </Typography>
-              </div>
-            ))}
+                  <Typography
+                    variant="exo2_regular"
+                    sx={{ fontSize: "1.3rem" }}
+                  >
+                    {service.name}
+                  </Typography>
+                  <Typography
+                    variant="exo2_bold"
+                    className={classes.listItemPrice}
+                  >
+                    {service.price} ₽
+                  </Typography>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
-        </div>
-
-        <div className={classes.category}>
-          <Typography variant="exo2_bold" sx={{ fontSize: "1.7rem" }}>
-            Комплексные
-          </Typography>
-          <div className={classes.list}>
-            {complexServices.map((service) => (
-              <div
-                key={service.name + service.price}
-                className={classes.listItem}
-              >
-                <Typography variant="exo2_regular" sx={{ fontSize: "1.3rem" }}>
-                  {service.name}
-                </Typography>
-                <Typography
-                  variant="exo2_bold"
-                  className={classes.listItemPrice}
-                >
-                  {service.price} ₽
-                </Typography>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className={classes.category}>
-          <Typography variant="exo2_bold" sx={{ fontSize: "1.7rem" }}>
-            Дополнительные
-          </Typography>
-          <div className={classes.list}>
-            {additionalServices.map((service) => (
-              <div
-                key={service.name + service.price}
-                className={classes.listItem}
-              >
-                <Typography variant="exo2_regular" sx={{ fontSize: "1.3rem" }}>
-                  {service.name}
-                </Typography>
-                <Typography
-                  variant="exo2_bold"
-                  className={classes.listItemPrice}
-                >
-                  {service.price} ₽
-                </Typography>
-              </div>
-            ))}
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
