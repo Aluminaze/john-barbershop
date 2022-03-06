@@ -1,1 +1,1 @@
-export { Location } from "./Location";
+export { Location, MLocation } from "./Location";

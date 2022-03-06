@@ -1,15 +1,17 @@
 import Typography from "@mui/material/Typography";
 import { useStyles } from "./styles";
+import { motion } from "framer-motion";
+import { forwardRef, LegacyRef } from "react";
 
 import haircutImg from "./img/haircut.png";
 import shavingImg from "./img/shaving.png";
 import careImg from "./img/care.png";
 
-export const Services = () => {
+export const Services = forwardRef((props, ref: LegacyRef<any>) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.block}>
+    <div className={classes.block} ref={ref}>
       <Typography variant="exo2_bold" sx={{ fontSize: "1.4rem" }}>
         Наши услуги
       </Typography>
@@ -41,4 +43,6 @@ export const Services = () => {
       </div>
     </div>
   );
-};
+});
+
+export const MServices = motion(Services);

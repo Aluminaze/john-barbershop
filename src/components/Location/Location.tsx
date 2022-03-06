@@ -3,12 +3,14 @@ import { Icons } from "components/Icons";
 import { useStyles } from "./styles";
 
 import { config } from "config";
+import { motion } from "framer-motion";
+import { forwardRef, LegacyRef } from "react";
 
-export const Location = () => {
+export const Location = forwardRef((props, ref: LegacyRef<any>) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.block}>
+    <div className={classes.block} ref={ref}>
       <Typography variant="exo2_bold" sx={{ fontSize: "1.4rem" }}>
         Мы находимся и работаем
       </Typography>
@@ -37,4 +39,6 @@ export const Location = () => {
       </a>
     </div>
   );
-};
+});
+
+export const MLocation = motion(Location);
