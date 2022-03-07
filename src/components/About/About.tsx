@@ -4,6 +4,8 @@ import teamImg from "./img/team.png";
 import staffImg from "./img/staff.png";
 import networkImg from "./img/network.png";
 import decorImg from "./img/decor.png";
+import { motion } from "framer-motion";
+import { motionTitleVar } from "motionVariants";
 
 interface ICardStruct {
   img: any;
@@ -42,20 +44,50 @@ const cards: ICardStruct[] = [
   },
 ];
 
+const motionCardVar = {
+  hidden: {
+    opacity: 0,
+    x: 200,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
+
 export const About = () => {
   const classes = useStyles();
 
   return (
     <div className={classes.block}>
-      <div className={classes.blockTitle}>
+      <motion.div
+        className={classes.blockTitle}
+        variants={motionTitleVar}
+        initial="hidden"
+        custom={1}
+        whileInView="visible"
+        viewport={{ amount: 0.5, once: true }}
+      >
         <Typography variant="exo2_bold" className={classes.blockTitleText}>
           О нас
         </Typography>
-      </div>
+      </motion.div>
 
       <div className={classes.cards}>
         {cards.map((cardItem) => (
-          <div key={cardItem.title} className={classes.card}>
+          <motion.div
+            key={cardItem.title}
+            className={classes.card}
+            variants={motionCardVar}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.4 }}
+          >
             <div className={classes.cardImgBlock}>
               <img
                 src={decorImg}
@@ -85,7 +117,7 @@ export const About = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
