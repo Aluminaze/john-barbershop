@@ -3,6 +3,7 @@ import { useStyles } from "./styles";
 import shaveImg from "./img/shave.png";
 import chairImg from "./img/chair.png";
 import { motion } from "framer-motion";
+import { motionTitleVar } from "motionVariants";
 
 interface IServiceList {
   name: string;
@@ -57,18 +58,6 @@ const categories: ICategoryList[] = [
   },
 ];
 
-const titleVar = {
-  hidden: {
-    opacity: 0,
-    y: 100,
-  },
-  visible: (custom: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: custom * 0.2 },
-  }),
-};
-
 const categoryTitleVar = {
   hidden: {
     opacity: 0,
@@ -111,7 +100,7 @@ export const PriceList = () => {
       <div className={classes.content}>
         <motion.div
           className={classes.titleWrap}
-          variants={titleVar}
+          variants={motionTitleVar}
           initial="hidden"
           custom={1}
           whileInView="visible"
