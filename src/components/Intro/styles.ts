@@ -59,19 +59,19 @@ export const useStyles = makeStyles((theme: Theme) => {
     },
     headerInfoTitleText: {
       "&.MuiTypography-root": {
-        fontSize: "2rem",
+        fontSize: "1.7rem",
 
         [theme.breakpoints.down("desktopS_960")]: {
-          fontSize: "1.7rem",
+          fontSize: "1.4rem",
         },
       },
     },
     headerInfoText: {
       "&.MuiTypography-root": {
-        fontSize: "1.4rem",
+        fontSize: "1.3rem",
 
         [theme.breakpoints.down("desktopS_960")]: {
-          fontSize: "1.2rem",
+          fontSize: "1.1rem",
         },
       },
     },
