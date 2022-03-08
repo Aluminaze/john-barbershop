@@ -43,6 +43,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     alignSelf: "center",
     boxShadow: "-4px 23px 45px -2px rgba(60, 62, 64, 0.4)",
+    borderRadius: "30px",
+    overflow: "hidden",
 
     [theme.breakpoints.down("desktopS_960")]: {
       width: "85%",
