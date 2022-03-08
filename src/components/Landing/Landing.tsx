@@ -28,10 +28,10 @@ export const Landing = () => {
               </div>
             </div>
           </section>
-          <section
-            id={SECTION.PRICE_LIST}
-            className={classes.sectionWithBorder}
-          >
+          <section className={classes.sectionDivider}>
+            <div className={classes.containerDivider} />
+          </section>
+          <section id={SECTION.PRICE_LIST} className={classes.section}>
             <div className={classes.container}>
               <div className={classes.block}>
                 <PriceList />

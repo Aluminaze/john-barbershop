@@ -21,26 +21,20 @@ export const useStyles = makeStyles((theme: Theme) => {
       justifyContent: "center",
       position: "relative",
     },
-    sectionWithBorder: {
+    sectionDivider: {
       flexGrow: 1,
-      height: "100%",
+      minHeight: "50px",
       display: "flex",
       justifyContent: "center",
-      position: "relative",
-
-      "&:before": {
-        content: "''",
-        position: "absolute",
-        height: "50px",
-        top: "-30px",
-        left: 0,
-        right: 0,
-        borderTopLeftRadius: "30px",
-        borderTopRightRadius: "30px",
-        width: "100%",
-        backgroundColor: "#fff",
-        boxShadow: "0px -5px 5px -5px rgba(34, 60, 80, 0.6)",
-      },
+      backgroundColor: "#125a4c",
+    },
+    containerDivider: {
+      width: "100%",
+      height: "100%",
+      borderTopLeftRadius: "30px",
+      borderTopRightRadius: "30px",
+      backgroundColor: theme.customColor.background.primary.lightMode,
+      transform: "translateY(3px)",
     },
     sectionBackground: {
       zIndex: -1,
