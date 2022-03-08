@@ -18,6 +18,7 @@ export const useStyles = makeStyles((theme: Theme) => {
       justifyContent: "center",
       alignItems: "center",
       gap: "10px",
+      cursor: "pointer",
     },
     itemText: {
       "&.MuiTypography-root": {
