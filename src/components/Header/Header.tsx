@@ -9,6 +9,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useAppTheme } from "hooks/useAppTheme";
 import { appConfig } from "appConfig";
 import { motion } from "framer-motion";
+import { Icons } from "components/Icons";
 
 const navVar = {
   hidden: { opacity: 0 },
@@ -42,9 +43,10 @@ const CustomButton = styled(Button)(({ theme }) => ({
 export const Header = () => {
   const classes = useStyles();
   const theme = useAppTheme();
-  const isMoreThanTablet768px = useMediaQuery(
-    theme.breakpoints.up("tablet_768")
+  const isMoreThanTablet960 = useMediaQuery(
+    theme.breakpoints.up("desktopS_960")
   );
+  const isMoreThanTablet768 = useMediaQuery(theme.breakpoints.up("tablet_768"));
 
   const handleSignUp = (): void => {
     window.location.href = appConfig.yclients;
@@ -88,7 +90,7 @@ export const Header = () => {
           </Typography>
         </div>
 
-        {isMoreThanTablet768px && (
+        {isMoreThanTablet960 && (
           <motion.ul
             variants={navVar}
             initial="hidden"
@@ -137,13 +139,27 @@ export const Header = () => {
           </motion.ul>
         )}
 
-        <CustomButton
-          variant="contained"
-          sx={{ fontSize: "1rem" }}
-          onClick={handleSignUp}
-        >
-          Записаться онлайн
-        </CustomButton>
+        <div className={classes.actions}>
+          <a
+            href={`tel:+${appConfig.phoneNumber}`}
+            className={classes.phoneLink}
+          >
+            <Icons.Phone sx={{ color: theme.customColor.green_pine }} />
+            {isMoreThanTablet768 && (
+              <Typography variant="exo2_regular">
+                {appConfig.phoneLabel}
+              </Typography>
+            )}
+          </a>
+
+          <CustomButton
+            variant="contained"
+            sx={{ fontSize: "1rem" }}
+            onClick={handleSignUp}
+          >
+            Записаться онлайн
+          </CustomButton>
+        </div>
       </div>
     </div>
   );
