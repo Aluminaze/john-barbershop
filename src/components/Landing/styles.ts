@@ -21,6 +21,27 @@ export const useStyles = makeStyles((theme: Theme) => {
       justifyContent: "center",
       position: "relative",
     },
+    sectionWithBorder: {
+      flexGrow: 1,
+      height: "100%",
+      display: "flex",
+      justifyContent: "center",
+      position: "relative",
+
+      "&:before": {
+        content: "''",
+        position: "absolute",
+        height: "50px",
+        top: "-30px",
+        left: 0,
+        right: 0,
+        borderTopLeftRadius: "30px",
+        borderTopRightRadius: "30px",
+        width: "100%",
+        backgroundColor: "#fff",
+        boxShadow: "0px -5px 5px -5px rgba(34, 60, 80, 0.6)",
+      },
+    },
     sectionBackground: {
       zIndex: -1,
       backgroundRepeat: "repeat",

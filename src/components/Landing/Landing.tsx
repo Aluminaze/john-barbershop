@@ -5,7 +5,7 @@ import { PriceList } from "components/PriceList";
 import { About } from "components/About";
 import { Footer } from "components/Footer";
 import { SECTION } from "variables";
-import bgImg from "./img/bg1.png";
+import backgroundImg from "./img/background.png";
 
 export const Landing = () => {
   const classes = useStyles();
@@ -19,7 +19,7 @@ export const Landing = () => {
             <div
               className={classes.sectionBackground}
               style={{
-                backgroundImage: `url(${bgImg})`,
+                backgroundImage: `url(${backgroundImg})`,
               }}
             />
             <div className={classes.container}>
@@ -28,7 +28,10 @@ export const Landing = () => {
               </div>
             </div>
           </section>
-          <section id={SECTION.PRICE_LIST} className={classes.section}>
+          <section
+            id={SECTION.PRICE_LIST}
+            className={classes.sectionWithBorder}
+          >
             <div className={classes.container}>
               <div className={classes.block}>
                 <PriceList />
