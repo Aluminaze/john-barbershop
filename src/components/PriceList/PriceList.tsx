@@ -112,7 +112,7 @@ export const PriceList = () => {
         </motion.div>
 
         {categories.map((category) => (
-          <div className={classes.category}>
+          <div className={classes.category} key={category.title}>
             <motion.div
               variants={categoryTitleVar}
               initial="hidden"
