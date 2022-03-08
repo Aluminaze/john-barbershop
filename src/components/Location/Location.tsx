@@ -2,7 +2,7 @@ import Typography from "@mui/material/Typography";
 import { Icons } from "components/Icons";
 import { useStyles } from "./styles";
 
-import { config } from "config";
+import { appConfig } from "appConfig";
 import { motion } from "framer-motion";
 import { forwardRef, LegacyRef } from "react";
 
@@ -15,7 +15,7 @@ export const Location = forwardRef((props, ref: LegacyRef<any>) => {
         Мы находимся и работаем
       </Typography>
 
-      <a href={config["2gis"]} target="_blank" rel="noreferrer">
+      <a href={appConfig["2gis"]} target="_blank" rel="noreferrer">
         <div className={classes.items}>
           <div className={classes.item}>
             <Icons.Location sx={{ fontSize: "30px" }} />

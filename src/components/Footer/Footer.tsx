@@ -1,7 +1,7 @@
 import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Icons } from "components/Icons";
-import { config } from "config";
+import { appConfig } from "appConfig";
 import { useAppTheme } from "hooks/useAppTheme";
 import { useStyles } from "./styles";
 
@@ -17,7 +17,7 @@ export const Footer = () => {
           className={classes.link}
           target="_blank"
           rel="noreferrer"
-          href={config.whatsapp}
+          href={appConfig.whatsapp}
         >
           <Icons.Whatsapp
             sx={{ color: "#ffffff", fontSize: `${isLessThan960 ? 30 : 40}px` }}
@@ -27,7 +27,7 @@ export const Footer = () => {
           className={classes.link}
           target="_blank"
           rel="noreferrer"
-          href={config.instagram}
+          href={appConfig.instagram}
         >
           <Icons.Instagram
             sx={{ color: "#ffffff", fontSize: `${isLessThan960 ? 30 : 40}px` }}

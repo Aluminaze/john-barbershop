@@ -7,7 +7,7 @@ import { styled } from "@mui/material/styles";
 import { SECTION } from "variables";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useAppTheme } from "hooks/useAppTheme";
-import { config } from "config";
+import { appConfig } from "appConfig";
 import { motion } from "framer-motion";
 
 const navVar = {
@@ -47,7 +47,7 @@ export const Header = () => {
   );
 
   const handleSignUp = (): void => {
-    window.location.href = config.yclients;
+    window.location.href = appConfig.yclients;
   };
 
   return (
